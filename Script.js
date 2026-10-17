@@ -9,6 +9,7 @@ function preload() {
 function setup() {
 	createCanvas(1000, 1000);
 	analyzer = new p5.Amplitude();
+	amp.setInput(beat);
 }
 
 function draw() {
