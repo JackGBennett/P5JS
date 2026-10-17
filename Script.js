@@ -1,7 +1,9 @@
 let beat;
+let isLooping = false;
 // Load sound file before canvas loads so it is ready
+
 function preload() {
-beat = loadSound('Boom.mp3');
+	beat = loadSound('Boom.mp3');
 }
 
 function setup() {
@@ -13,11 +15,7 @@ function draw() {
 }
 
 function mousePressed() {
-	if (beat.isPlaying()) {
-		beat.stop();
-	} else {
-		beat.loop();
-	}
+	beat.loop();
 }
 
 function draw() {
