@@ -10,7 +10,7 @@ function setup() {
 	createCanvas(1000, 1000);
 }
 
-function Draw() {
+function draw() {
     square(mouseX, mouseY, 50);
   } else {
     square(mouseX, mouseY, 30);
