@@ -11,16 +11,15 @@ function setup() {
 }
 
 function Draw() {
-  if (mouseIsPressed) {
-    if (!beat.isPlaying()) {
-      beat.loop();
-    }
-	
-	
     square(mouseX, mouseY, 50);
   } else {
     square(mouseX, mouseY, 30);
   }
 }
 
-
+function mousePressed() {
+	if (!isLooping) {
+		beat.loop();
+		isLooping = true;
+	}
+}
