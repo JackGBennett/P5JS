@@ -15,19 +15,17 @@ function setup() {
 function draw() {
 	let vol = amp.getLevel();
 	
-	
+
 	if (mouseIsPressed) {
-		square(mouseX, mouseY, vol);
+		square(mouseX, mouseY, vol * 20);
+	} else {
+		square(mouseX, mouseY, vol * 50);
+	}
 }
 
 function mousePressed() {
-	if (isLooping) {
-	} else {
+	if (isLooping == false) {
 	beat.loop();		
 	isLooping = true;
 	}
 }
-	
-	
-
-
