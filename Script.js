@@ -19,9 +19,10 @@ function draw() {
 }
 
 function mousePressed() {
-	if (!isLooping) {
-		beat.loop();
-		isLooping = true;
+	if (isLooping) {
+	} else {
+	beat.loop();		
+	isLooping = true;
 	}
 }
 	
