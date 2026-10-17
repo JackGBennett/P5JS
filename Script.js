@@ -10,11 +10,12 @@ function setup() {
 	createCanvas(1000, 1000);
 }
 
-function draw() {
-    square(mouseX, mouseY, 50);
-  } else {
-    square(mouseX, mouseY, 30);
-  }
+function Draw() {
+	if (mouseIsPressed) {
+		square(mouseX, mouseY, 50);
+	} else {
+		square(mouseX, mouseY, 30);
+	}
 }
 
 function mousePressed() {
@@ -23,3 +24,7 @@ function mousePressed() {
 		isLooping = true;
 	}
 }
+	
+	
+
+
