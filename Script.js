@@ -13,17 +13,20 @@ function setup() {
 }
 
 function draw() {
-	background(220);
+  background(220);
+
+  let volume = analyzer.getLevel();
+  let squareSize = volume * 1000;
+
+  if (mouseIsPressed) {
+    square(mouseX, mouseY, squareSize);
+  } else {
+    square(mouseX, mouseY, 30);
+  }
 }
 
 function mousePressed() {
-	beat.loop();
-}
-
-function draw() {
-  if (mouseIsPressed) {
-    square(mouseX,mouseY, analyzer); 
-  } else {
-    square(mouseX,mouseY, 30);
+  if (!beat.isPlaying()) {
+    beat.loop();
   }
 }
