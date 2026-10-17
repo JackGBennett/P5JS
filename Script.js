@@ -24,7 +24,8 @@ function draw() {
 }
 
 function mousePressed() {
-	if (isLooping == false) {
+	if (isLooping) {
+	} else {
 	beat.loop();		
 	isLooping = true;
 	}
