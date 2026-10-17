@@ -1,4 +1,4 @@
-let beat, analyzer;
+let beat;
 let isLooping = false;
 // Load sound file before canvas loads so it is ready
 
@@ -10,7 +10,7 @@ function setup() {
 	createCanvas(1000, 1000);
 }
 
-function draw() {
+function Draw() {
 	if (mouseIsPressed) {
 		square(mouseX, mouseY, 50);
 	} else {
