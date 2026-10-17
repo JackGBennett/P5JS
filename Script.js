@@ -1,4 +1,4 @@
-let beat, analyzer;
+let beat, amp;
 let isLooping = false;
 // Load sound file before canvas loads so it is ready
 
@@ -8,7 +8,7 @@ function preload() {
 
 function setup() {
 	createCanvas(1000, 1000);
-	analyzer = new p5.Amplitude();
+	amp = new p5.Amplitude();
 	amp.setInput(beat);
 }
 
