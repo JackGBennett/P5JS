@@ -8,16 +8,9 @@ function preload() {
 
 function setup() {
 	createCanvas(1000, 1000);
-	analyzer = new p5.Amplitude();
-	analyzer.setInput(beat);
 }
 
-function draw() {
-  background(220);
-
-  let volume = analyzer.getLevel();
-  let squareSize = volume * 1000;
-
+function Draw() {
   if (mouseIsPressed) {
     square(mouseX, mouseY, squareSize);
   } else {
@@ -25,9 +18,7 @@ function draw() {
   }
 }
 
-function draw() {
-  let volume = analyzer.getLevel();
-
+function Mouse() {
   if (mouseIsPressed) {
     square(mouseX, mouseY, volume * 1000);
   } else {
