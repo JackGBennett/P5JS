@@ -1,4 +1,4 @@
-let beat;
+let beat, analyzer;
 let isLooping = false;
 // Load sound file before canvas loads so it is ready
 
@@ -8,13 +8,17 @@ function preload() {
 
 function setup() {
 	createCanvas(1000, 1000);
+	analyzer = new p5.Amplitude();
 }
 
 function draw() {
+	let vol = amp.getLevel();
+	
+	
 	if (mouseIsPressed) {
-		square(mouseX, mouseY, 50);
+		square(mouseX, mouseY, vol);
 	} else {
-		square(mouseX, mouseY, 30);
+		square(mouseX, mouseY, vol * 50);
 	}
 }
 
