@@ -18,9 +18,6 @@ function draw() {
 	
 	if (mouseIsPressed) {
 		square(mouseX, mouseY, vol);
-	} else {
-		square(mouseX, mouseY, vol * 50);
-	}
 }
 
 function mousePressed() {
