@@ -12,17 +12,15 @@ function setup() {
 
 function Draw() {
   if (mouseIsPressed) {
-    square(mouseX, mouseY, squareSize);
+    if (!beat.isPlaying()) {
+      beat.loop();
+    }
+	
+	
+    square(mouseX, mouseY, 50);
   } else {
     square(mouseX, mouseY, 30);
   }
 }
 
-function Mouse() {
-  if (mouseIsPressed) {
-    square(mouseX, mouseY, volume * 1000);
-  } else {
-    square(mouseX, mouseY, 30);
-  }
-}
-}
+
