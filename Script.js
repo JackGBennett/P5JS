@@ -25,8 +25,13 @@ function draw() {
   }
 }
 
-function mousePressed() {
-  if (!beat.isPlaying()) {
-    beat.loop();
+function draw() {
+  let volume = analyzer.getLevel();
+
+  if (mouseIsPressed) {
+    square(mouseX, mouseY, volume * 1000);
+  } else {
+    square(mouseX, mouseY, 30);
   }
+}
 }
