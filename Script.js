@@ -15,7 +15,8 @@ function setup() {
 function draw() {
 	let vol = amp.getLevel();
 	
-
+	fill(random(255), random(255), random(255)); 
+	
 	if (mouseIsPressed) {
 		square(mouseX, mouseY, vol * 20);
 	} else {
